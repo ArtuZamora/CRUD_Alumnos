@@ -169,6 +169,8 @@
     <Compile Include="Controllers\AlumnoController.cs" />
     <Compile Include="Controllers\DocenteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MateriaController.cs" />
+    <Compile Include="Controllers\RegistroNotasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -389,6 +391,16 @@
     <Content Include="Views\Docente\Index.cshtml" />
     <Content Include="Views\Docente\Editar.cshtml" />
     <Content Include="Views\Docente\Detalles.cshtml" />
+    <Content Include="Views\Materia\Index.cshtml" />
+    <Content Include="Views\Materia\Agregar.cshtml" />
+    <Content Include="Views\Materia\Editar.cshtml" />
+    <Content Include="Views\Materia\Detalles.cshtml" />
+    <Content Include="Views\RegistroNotas\Index.cshtml" />
+    <Content Include="Views\RegistroNotas\Agregar.cshtml" />
+    <Content Include="Views\RegistroNotas\Editar.cshtml" />
+    <Content Include="Views\RegistroNotas\Detalles.cshtml" />
+    <Content Include="Views\RegistroNotas\ListaMaterias.cshtml" />
+    <Content Include="Views\RegistroNotas\ListaAlumnos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

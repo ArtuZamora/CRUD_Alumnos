@@ -1,0 +1,9 @@
+﻿@model IEnumerable<CRUD_Alumnos.Models.Alumno>
+
+<select class="form-control" id="CodAlumno" name="CodAlumno">
+    @foreach (var item in Model)
+    {
+        <option value="@item.Id">@item.Nombres @item.Apellidos</option>
+    }
+</select>
+

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CRUD_Alumnos.Models.Materia>
+
+@{
+    ViewBag.Title = "Lista de materias";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de materias</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Agregar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Materia
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Detalles", "Detalles", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id }, new { @class = "aEliminar" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section scripts{
+    <script>
+        $(".aEliminar").click(function (event) {
+            if (!confirm('¿Estás seguro de eliminar?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}

@@ -1,0 +1,80 @@
+﻿@model IEnumerable<CRUD_Alumnos.Models.RegistroNotasCE>
+
+@{
+    ViewBag.Title = "Registro de Notas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registro de Notas</h2>
+
+<p>
+    @Html.ActionLink("Agregar notas", "Agregar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Materia
+        </th>
+        <th>
+            Alumno
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Periodo)
+        </th>
+        <th>
+            Primera Nota
+        </th>
+        <th>
+            Segunda Nota
+        </th>
+        <th>
+            Tercera Nota
+        </th>
+        <th>
+            Cuarta Nota
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreMateria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreAlumno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Periodo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nota1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nota2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nota3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nota4)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Detalles", "Detalles", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id }, new { @class = "aEliminar" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section scripts{
+    <script>
+        $(".aEliminar").click(function (event) {
+            if (!confirm('¿Estás seguro de eliminar?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}
