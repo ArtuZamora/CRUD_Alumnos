@@ -57,7 +57,7 @@
             @Html.LabelFor(model => model.CodCiudad, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.Action("ListaCiudades")
-                @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.CodCiudad, "", new { @class = "text-danger" })
             </div>
         </div>
 

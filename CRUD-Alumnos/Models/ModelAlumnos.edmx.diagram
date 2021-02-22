@@ -5,9 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e8339b9e0a74440c9cd3f6e03a8e8e21" Name="Diagram1">
-        <EntityTypeShape EntityType="AlumnosDBModel.Alumno" Width="1.5" PointX="2" PointY="0.625" />
-        <EntityTypeShape EntityType="AlumnosDBModel.Ciudad" Width="1.5" PointX="4.875" PointY="1" />
+        <EntityTypeShape EntityType="AlumnosDBModel.Alumno" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="AlumnosDBModel.Ciudad" Width="1.5" PointX="0.75" PointY="3" />
+        <EntityTypeShape EntityType="AlumnosDBModel.Docente" Width="1.5" PointX="3" PointY="4.75" />
+        <EntityTypeShape EntityType="AlumnosDBModel.Materia" Width="1.5" PointX="3" PointY="7.75" />
+        <EntityTypeShape EntityType="AlumnosDBModel.RegistroNotas" Width="1.5" PointX="5.25" PointY="1.125" />
         <AssociationConnector Association="AlumnosDBModel.FK_Alumno_Ciudad" />
+        <AssociationConnector Association="AlumnosDBModel.FK_RegistroNotas_Alumno" />
+        <AssociationConnector Association="AlumnosDBModel.FK_Docente_Ciudad" />
+        <AssociationConnector Association="AlumnosDBModel.FK_RegistroNotas_Materia" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
